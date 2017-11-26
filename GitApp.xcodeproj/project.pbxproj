@@ -8,20 +8,110 @@
 
 /* Begin PBXBuildFile section */
 		511EDA9E1FCAD27500928DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDA9D1FCAD27500928DC2 /* AppDelegate.swift */; };
-		511EDAA01FCAD27500928DC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDA9F1FCAD27500928DC2 /* ViewController.swift */; };
-		511EDAA31FCAD27500928DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAA11FCAD27500928DC2 /* Main.storyboard */; };
 		511EDAA51FCAD27500928DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAA41FCAD27500928DC2 /* Assets.xcassets */; };
 		511EDAA81FCAD27500928DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAA61FCAD27500928DC2 /* LaunchScreen.storyboard */; };
+		511EDAE71FCAD44300928DC2 /* BranchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAB51FCAD44300928DC2 /* BranchView.swift */; };
+		511EDAE81FCAD44300928DC2 /* BranchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAB61FCAD44300928DC2 /* BranchInteractor.swift */; };
+		511EDAE91FCAD44300928DC2 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAB71FCAD44300928DC2 /* Branch.swift */; };
+		511EDAEA1FCAD44300928DC2 /* BranchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAB81FCAD44300928DC2 /* BranchPresenter.swift */; };
+		511EDAEB1FCAD44300928DC2 /* BranchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAB91FCAD44300928DC2 /* BranchProtocols.swift */; };
+		511EDAEC1FCAD44300928DC2 /* Branch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDABA1FCAD44300928DC2 /* Branch.storyboard */; };
+		511EDAED1FCAD44300928DC2 /* BranchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDABB1FCAD44300928DC2 /* BranchWireframe.swift */; };
+		511EDAEE1FCAD44300928DC2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDABD1FCAD44300928DC2 /* CardView.swift */; };
+		511EDAEF1FCAD44300928DC2 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDABE1FCAD44300928DC2 /* RepoCell.swift */; };
+		511EDAF01FCAD44300928DC2 /* RepoListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDABF1FCAD44300928DC2 /* RepoListProtocols.swift */; };
+		511EDAF11FCAD44300928DC2 /* RepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC01FCAD44300928DC2 /* RepoListPresenter.swift */; };
+		511EDAF21FCAD44300928DC2 /* RepoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAC11FCAD44300928DC2 /* RepoList.storyboard */; };
+		511EDAF31FCAD44300928DC2 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC31FCAD44300928DC2 /* RepoListView.swift */; };
+		511EDAF41FCAD44300928DC2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC41FCAD44300928DC2 /* Repository.swift */; };
+		511EDAF51FCAD44300928DC2 /* RepoListInteractor .swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC51FCAD44300928DC2 /* RepoListInteractor .swift */; };
+		511EDAF61FCAD44300928DC2 /* RepoListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC61FCAD44300928DC2 /* RepoListWireframe.swift */; };
+		511EDAF71FCAD44300928DC2 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC81FCAD44300928DC2 /* Language.swift */; };
+		511EDAF81FCAD44300928DC2 /* LanguageWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC91FCAD44300928DC2 /* LanguageWireframe.swift */; };
+		511EDAF91FCAD44300928DC2 /* LanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACA1FCAD44300928DC2 /* LanguageInteractor.swift */; };
+		511EDAFA1FCAD44300928DC2 /* LanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACB1FCAD44300928DC2 /* LanguagePresenter.swift */; };
+		511EDAFB1FCAD44300928DC2 /* LanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACC1FCAD44300928DC2 /* LanguageProtocols.swift */; };
+		511EDAFC1FCAD44300928DC2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACD1FCAD44300928DC2 /* LanguageView.swift */; };
+		511EDAFD1FCAD44300928DC2 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDACE1FCAD44300928DC2 /* Language.storyboard */; };
+		511EDAFE1FCAD44300928DC2 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAD01FCAD44300928DC2 /* User.storyboard */; };
+		511EDAFF1FCAD44300928DC2 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD11FCAD44300928DC2 /* UserView.swift */; };
+		511EDB001FCAD44300928DC2 /* UserWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD21FCAD44300928DC2 /* UserWireframe.swift */; };
+		511EDB011FCAD44300928DC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD31FCAD44300928DC2 /* User.swift */; };
+		511EDB021FCAD44300928DC2 /* UserProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD41FCAD44300928DC2 /* UserProtocols.swift */; };
+		511EDB031FCAD44300928DC2 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD51FCAD44300928DC2 /* UserInteractor.swift */; };
+		511EDB041FCAD44300928DC2 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD61FCAD44300928DC2 /* UserPresenter.swift */; };
+		511EDB051FCAD44300928DC2 /* UserStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD71FCAD44300928DC2 /* UserStatsCell.swift */; };
+		511EDB061FCAD44300928DC2 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD91FCAD44300928DC2 /* Options.swift */; };
+		511EDB071FCAD44300928DC2 /* RepoDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDADA1FCAD44300928DC2 /* RepoDetails.storyboard */; };
+		511EDB081FCAD44300928DC2 /* RepoDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDADB1FCAD44300928DC2 /* RepoDetailsWireframe.swift */; };
+		511EDB091FCAD44300928DC2 /* RepoDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDADC1FCAD44300928DC2 /* RepoDetailsInteractor.swift */; };
+		511EDB0A1FCAD44300928DC2 /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDADD1FCAD44300928DC2 /* RepoDetailsView.swift */; };
+		511EDB0B1FCAD44300928DC2 /* RepoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDADE1FCAD44300928DC2 /* RepoDetailsPresenter.swift */; };
+		511EDB0C1FCAD44300928DC2 /* RepoDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDADF1FCAD44300928DC2 /* RepoDetailsProtocols.swift */; };
+		511EDB0D1FCAD44300928DC2 /* ContributorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAE11FCAD44300928DC2 /* ContributorPresenter.swift */; };
+		511EDB0E1FCAD44300928DC2 /* ContributorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAE21FCAD44300928DC2 /* ContributorInteractor.swift */; };
+		511EDB0F1FCAD44300928DC2 /* ContributorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAE31FCAD44300928DC2 /* ContributorProtocols.swift */; };
+		511EDB101FCAD44300928DC2 /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAE41FCAD44300928DC2 /* ContributorView.swift */; };
+		511EDB111FCAD44300928DC2 /* ContributorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAE51FCAD44300928DC2 /* ContributorWireframe.swift */; };
+		511EDB121FCAD44300928DC2 /* Contributor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAE61FCAD44300928DC2 /* Contributor.storyboard */; };
+		511EDB151FCAD44E00928DC2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDB141FCAD44E00928DC2 /* Router.swift */; };
+		91BC50D1D00D673875B21F20 /* Pods_GitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB0FA9EFCD68FD2D7524F5 /* Pods_GitApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07CB0FA9EFCD68FD2D7524F5 /* Pods_GitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FF9C8340B98DB91A47EC80 /* Pods-GitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitApp/Pods-GitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		511EDA9A1FCAD27500928DC2 /* GitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511EDA9D1FCAD27500928DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		511EDA9F1FCAD27500928DC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		511EDAA21FCAD27500928DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		511EDAA41FCAD27500928DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511EDAA71FCAD27500928DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		511EDAA91FCAD27500928DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		511EDAB51FCAD44300928DC2 /* BranchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchView.swift; sourceTree = "<group>"; };
+		511EDAB61FCAD44300928DC2 /* BranchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchInteractor.swift; sourceTree = "<group>"; };
+		511EDAB71FCAD44300928DC2 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		511EDAB81FCAD44300928DC2 /* BranchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchPresenter.swift; sourceTree = "<group>"; };
+		511EDAB91FCAD44300928DC2 /* BranchProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchProtocols.swift; sourceTree = "<group>"; };
+		511EDABA1FCAD44300928DC2 /* Branch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Branch.storyboard; sourceTree = "<group>"; };
+		511EDABB1FCAD44300928DC2 /* BranchWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchWireframe.swift; sourceTree = "<group>"; };
+		511EDABD1FCAD44300928DC2 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		511EDABE1FCAD44300928DC2 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		511EDABF1FCAD44300928DC2 /* RepoListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListProtocols.swift; sourceTree = "<group>"; };
+		511EDAC01FCAD44300928DC2 /* RepoListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListPresenter.swift; sourceTree = "<group>"; };
+		511EDAC21FCAD44300928DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RepoList.storyboard; sourceTree = "<group>"; };
+		511EDAC31FCAD44300928DC2 /* RepoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
+		511EDAC41FCAD44300928DC2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		511EDAC51FCAD44300928DC2 /* RepoListInteractor .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RepoListInteractor .swift"; sourceTree = "<group>"; };
+		511EDAC61FCAD44300928DC2 /* RepoListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListWireframe.swift; sourceTree = "<group>"; };
+		511EDAC81FCAD44300928DC2 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		511EDAC91FCAD44300928DC2 /* LanguageWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageWireframe.swift; sourceTree = "<group>"; };
+		511EDACA1FCAD44300928DC2 /* LanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageInteractor.swift; sourceTree = "<group>"; };
+		511EDACB1FCAD44300928DC2 /* LanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePresenter.swift; sourceTree = "<group>"; };
+		511EDACC1FCAD44300928DC2 /* LanguageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageProtocols.swift; sourceTree = "<group>"; };
+		511EDACD1FCAD44300928DC2 /* LanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		511EDACE1FCAD44300928DC2 /* Language.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		511EDAD01FCAD44300928DC2 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		511EDAD11FCAD44300928DC2 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		511EDAD21FCAD44300928DC2 /* UserWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWireframe.swift; sourceTree = "<group>"; };
+		511EDAD31FCAD44300928DC2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		511EDAD41FCAD44300928DC2 /* UserProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocols.swift; sourceTree = "<group>"; };
+		511EDAD51FCAD44300928DC2 /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		511EDAD61FCAD44300928DC2 /* UserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
+		511EDAD71FCAD44300928DC2 /* UserStatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatsCell.swift; sourceTree = "<group>"; };
+		511EDAD91FCAD44300928DC2 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		511EDADA1FCAD44300928DC2 /* RepoDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RepoDetails.storyboard; sourceTree = "<group>"; };
+		511EDADB1FCAD44300928DC2 /* RepoDetailsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsWireframe.swift; sourceTree = "<group>"; };
+		511EDADC1FCAD44300928DC2 /* RepoDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsInteractor.swift; sourceTree = "<group>"; };
+		511EDADD1FCAD44300928DC2 /* RepoDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
+		511EDADE1FCAD44300928DC2 /* RepoDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsPresenter.swift; sourceTree = "<group>"; };
+		511EDADF1FCAD44300928DC2 /* RepoDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsProtocols.swift; sourceTree = "<group>"; };
+		511EDAE11FCAD44300928DC2 /* ContributorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorPresenter.swift; sourceTree = "<group>"; };
+		511EDAE21FCAD44300928DC2 /* ContributorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorInteractor.swift; sourceTree = "<group>"; };
+		511EDAE31FCAD44300928DC2 /* ContributorProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorProtocols.swift; sourceTree = "<group>"; };
+		511EDAE41FCAD44300928DC2 /* ContributorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorView.swift; sourceTree = "<group>"; };
+		511EDAE51FCAD44300928DC2 /* ContributorWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorWireframe.swift; sourceTree = "<group>"; };
+		511EDAE61FCAD44300928DC2 /* Contributor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contributor.storyboard; sourceTree = "<group>"; };
+		511EDB141FCAD44E00928DC2 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9F81B16B71375F86066E3364 /* Pods-GitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitApp/Pods-GitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +119,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91BC50D1D00D673875B21F20 /* Pods_GitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		330A22DCA55286F1B867C4A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07CB0FA9EFCD68FD2D7524F5 /* Pods_GitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		511EDA911FCAD27500928DC2 = {
 			isa = PBXGroup;
 			children = (
 				511EDA9C1FCAD27500928DC2 /* GitApp */,
 				511EDA9B1FCAD27500928DC2 /* Products */,
+				E9472B95342D9F682A66A143 /* Pods */,
+				330A22DCA55286F1B867C4A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +155,130 @@
 		511EDA9C1FCAD27500928DC2 /* GitApp */ = {
 			isa = PBXGroup;
 			children = (
+				511EDB131FCAD44E00928DC2 /* Router */,
+				511EDAB31FCAD44300928DC2 /* Modules */,
 				511EDA9D1FCAD27500928DC2 /* AppDelegate.swift */,
-				511EDA9F1FCAD27500928DC2 /* ViewController.swift */,
-				511EDAA11FCAD27500928DC2 /* Main.storyboard */,
 				511EDAA41FCAD27500928DC2 /* Assets.xcassets */,
 				511EDAA61FCAD27500928DC2 /* LaunchScreen.storyboard */,
 				511EDAA91FCAD27500928DC2 /* Info.plist */,
 			);
 			path = GitApp;
+			sourceTree = "<group>";
+		};
+		511EDAB31FCAD44300928DC2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				511EDAB41FCAD44300928DC2 /* Branch */,
+				511EDABC1FCAD44300928DC2 /* RepoList */,
+				511EDAC71FCAD44300928DC2 /* Language */,
+				511EDACF1FCAD44300928DC2 /* User */,
+				511EDAD81FCAD44300928DC2 /* RepoDeatils */,
+				511EDAE01FCAD44300928DC2 /* Contributor */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		511EDAB41FCAD44300928DC2 /* Branch */ = {
+			isa = PBXGroup;
+			children = (
+				511EDAB51FCAD44300928DC2 /* BranchView.swift */,
+				511EDAB61FCAD44300928DC2 /* BranchInteractor.swift */,
+				511EDAB71FCAD44300928DC2 /* Branch.swift */,
+				511EDAB81FCAD44300928DC2 /* BranchPresenter.swift */,
+				511EDAB91FCAD44300928DC2 /* BranchProtocols.swift */,
+				511EDABA1FCAD44300928DC2 /* Branch.storyboard */,
+				511EDABB1FCAD44300928DC2 /* BranchWireframe.swift */,
+			);
+			path = Branch;
+			sourceTree = "<group>";
+		};
+		511EDABC1FCAD44300928DC2 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				511EDABD1FCAD44300928DC2 /* CardView.swift */,
+				511EDABE1FCAD44300928DC2 /* RepoCell.swift */,
+				511EDABF1FCAD44300928DC2 /* RepoListProtocols.swift */,
+				511EDAC01FCAD44300928DC2 /* RepoListPresenter.swift */,
+				511EDAC11FCAD44300928DC2 /* RepoList.storyboard */,
+				511EDAC31FCAD44300928DC2 /* RepoListView.swift */,
+				511EDAC41FCAD44300928DC2 /* Repository.swift */,
+				511EDAC51FCAD44300928DC2 /* RepoListInteractor .swift */,
+				511EDAC61FCAD44300928DC2 /* RepoListWireframe.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		511EDAC71FCAD44300928DC2 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				511EDAC81FCAD44300928DC2 /* Language.swift */,
+				511EDAC91FCAD44300928DC2 /* LanguageWireframe.swift */,
+				511EDACA1FCAD44300928DC2 /* LanguageInteractor.swift */,
+				511EDACB1FCAD44300928DC2 /* LanguagePresenter.swift */,
+				511EDACC1FCAD44300928DC2 /* LanguageProtocols.swift */,
+				511EDACD1FCAD44300928DC2 /* LanguageView.swift */,
+				511EDACE1FCAD44300928DC2 /* Language.storyboard */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		511EDACF1FCAD44300928DC2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				511EDAD01FCAD44300928DC2 /* User.storyboard */,
+				511EDAD11FCAD44300928DC2 /* UserView.swift */,
+				511EDAD21FCAD44300928DC2 /* UserWireframe.swift */,
+				511EDAD31FCAD44300928DC2 /* User.swift */,
+				511EDAD41FCAD44300928DC2 /* UserProtocols.swift */,
+				511EDAD51FCAD44300928DC2 /* UserInteractor.swift */,
+				511EDAD61FCAD44300928DC2 /* UserPresenter.swift */,
+				511EDAD71FCAD44300928DC2 /* UserStatsCell.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		511EDAD81FCAD44300928DC2 /* RepoDeatils */ = {
+			isa = PBXGroup;
+			children = (
+				511EDAD91FCAD44300928DC2 /* Options.swift */,
+				511EDADA1FCAD44300928DC2 /* RepoDetails.storyboard */,
+				511EDADB1FCAD44300928DC2 /* RepoDetailsWireframe.swift */,
+				511EDADC1FCAD44300928DC2 /* RepoDetailsInteractor.swift */,
+				511EDADD1FCAD44300928DC2 /* RepoDetailsView.swift */,
+				511EDADE1FCAD44300928DC2 /* RepoDetailsPresenter.swift */,
+				511EDADF1FCAD44300928DC2 /* RepoDetailsProtocols.swift */,
+			);
+			path = RepoDeatils;
+			sourceTree = "<group>";
+		};
+		511EDAE01FCAD44300928DC2 /* Contributor */ = {
+			isa = PBXGroup;
+			children = (
+				511EDAE11FCAD44300928DC2 /* ContributorPresenter.swift */,
+				511EDAE21FCAD44300928DC2 /* ContributorInteractor.swift */,
+				511EDAE31FCAD44300928DC2 /* ContributorProtocols.swift */,
+				511EDAE41FCAD44300928DC2 /* ContributorView.swift */,
+				511EDAE51FCAD44300928DC2 /* ContributorWireframe.swift */,
+				511EDAE61FCAD44300928DC2 /* Contributor.storyboard */,
+			);
+			path = Contributor;
+			sourceTree = "<group>";
+		};
+		511EDB131FCAD44E00928DC2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				511EDB141FCAD44E00928DC2 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E9472B95342D9F682A66A143 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11FF9C8340B98DB91A47EC80 /* Pods-GitApp.debug.xcconfig */,
+				9F81B16B71375F86066E3364 /* Pods-GitApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +288,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 511EDAAC1FCAD27500928DC2 /* Build configuration list for PBXNativeTarget "GitApp" */;
 			buildPhases = (
+				70FAD515818F18BD2DADACBE /* [CP] Check Pods Manifest.lock */,
 				511EDA961FCAD27500928DC2 /* Sources */,
 				511EDA971FCAD27500928DC2 /* Frameworks */,
 				511EDA981FCAD27500928DC2 /* Resources */,
+				C827A9BD4A41DA6340CED5C0 /* [CP] Embed Pods Frameworks */,
+				813637D82FCE40F114373291 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,41 +343,144 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511EDB121FCAD44300928DC2 /* Contributor.storyboard in Resources */,
+				511EDAF21FCAD44300928DC2 /* RepoList.storyboard in Resources */,
+				511EDB071FCAD44300928DC2 /* RepoDetails.storyboard in Resources */,
+				511EDAFD1FCAD44300928DC2 /* Language.storyboard in Resources */,
+				511EDAEC1FCAD44300928DC2 /* Branch.storyboard in Resources */,
 				511EDAA81FCAD27500928DC2 /* LaunchScreen.storyboard in Resources */,
 				511EDAA51FCAD27500928DC2 /* Assets.xcassets in Resources */,
-				511EDAA31FCAD27500928DC2 /* Main.storyboard in Resources */,
+				511EDAFE1FCAD44300928DC2 /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70FAD515818F18BD2DADACBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		813637D82FCE40F114373291 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitApp/Pods-GitApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C827A9BD4A41DA6340CED5C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GitApp/Pods-GitApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitApp/Pods-GitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		511EDA961FCAD27500928DC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				511EDAA01FCAD27500928DC2 /* ViewController.swift in Sources */,
+				511EDAED1FCAD44300928DC2 /* BranchWireframe.swift in Sources */,
+				511EDAEA1FCAD44300928DC2 /* BranchPresenter.swift in Sources */,
+				511EDAF11FCAD44300928DC2 /* RepoListPresenter.swift in Sources */,
+				511EDB091FCAD44300928DC2 /* RepoDetailsInteractor.swift in Sources */,
+				511EDAFB1FCAD44300928DC2 /* LanguageProtocols.swift in Sources */,
+				511EDB051FCAD44300928DC2 /* UserStatsCell.swift in Sources */,
+				511EDAF41FCAD44300928DC2 /* Repository.swift in Sources */,
+				511EDB0A1FCAD44300928DC2 /* RepoDetailsView.swift in Sources */,
+				511EDAE71FCAD44300928DC2 /* BranchView.swift in Sources */,
+				511EDB0B1FCAD44300928DC2 /* RepoDetailsPresenter.swift in Sources */,
+				511EDAF61FCAD44300928DC2 /* RepoListWireframe.swift in Sources */,
+				511EDAE91FCAD44300928DC2 /* Branch.swift in Sources */,
 				511EDA9E1FCAD27500928DC2 /* AppDelegate.swift in Sources */,
+				511EDAEF1FCAD44300928DC2 /* RepoCell.swift in Sources */,
+				511EDAE81FCAD44300928DC2 /* BranchInteractor.swift in Sources */,
+				511EDB021FCAD44300928DC2 /* UserProtocols.swift in Sources */,
+				511EDB081FCAD44300928DC2 /* RepoDetailsWireframe.swift in Sources */,
+				511EDB0D1FCAD44300928DC2 /* ContributorPresenter.swift in Sources */,
+				511EDB041FCAD44300928DC2 /* UserPresenter.swift in Sources */,
+				511EDAFF1FCAD44300928DC2 /* UserView.swift in Sources */,
+				511EDB001FCAD44300928DC2 /* UserWireframe.swift in Sources */,
+				511EDAFA1FCAD44300928DC2 /* LanguagePresenter.swift in Sources */,
+				511EDAF51FCAD44300928DC2 /* RepoListInteractor .swift in Sources */,
+				511EDAF01FCAD44300928DC2 /* RepoListProtocols.swift in Sources */,
+				511EDB111FCAD44300928DC2 /* ContributorWireframe.swift in Sources */,
+				511EDB0E1FCAD44300928DC2 /* ContributorInteractor.swift in Sources */,
+				511EDAF91FCAD44300928DC2 /* LanguageInteractor.swift in Sources */,
+				511EDAEE1FCAD44300928DC2 /* CardView.swift in Sources */,
+				511EDB031FCAD44300928DC2 /* UserInteractor.swift in Sources */,
+				511EDB0F1FCAD44300928DC2 /* ContributorProtocols.swift in Sources */,
+				511EDAF71FCAD44300928DC2 /* Language.swift in Sources */,
+				511EDAF31FCAD44300928DC2 /* RepoListView.swift in Sources */,
+				511EDB151FCAD44E00928DC2 /* Router.swift in Sources */,
+				511EDB011FCAD44300928DC2 /* User.swift in Sources */,
+				511EDB101FCAD44300928DC2 /* ContributorView.swift in Sources */,
+				511EDAEB1FCAD44300928DC2 /* BranchProtocols.swift in Sources */,
+				511EDAFC1FCAD44300928DC2 /* LanguageView.swift in Sources */,
+				511EDAF81FCAD44300928DC2 /* LanguageWireframe.swift in Sources */,
+				511EDB0C1FCAD44300928DC2 /* RepoDetailsProtocols.swift in Sources */,
+				511EDB061FCAD44300928DC2 /* Options.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		511EDAA11FCAD27500928DC2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				511EDAA21FCAD27500928DC2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		511EDAA61FCAD27500928DC2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				511EDAA71FCAD27500928DC2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		511EDAC11FCAD44300928DC2 /* RepoList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				511EDAC21FCAD44300928DC2 /* Base */,
+			);
+			name = RepoList.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,6 +595,7 @@
 		};
 		511EDAAD1FCAD27500928DC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11FF9C8340B98DB91A47EC80 /* Pods-GitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +610,7 @@
 		};
 		511EDAAE1FCAD27500928DC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F81B16B71375F86066E3364 /* Pods-GitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
