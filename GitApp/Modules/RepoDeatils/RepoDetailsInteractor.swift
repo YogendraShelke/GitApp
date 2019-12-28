@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class RepoDetailsInteractor: NSObject {
 	
@@ -20,14 +18,15 @@ class RepoDetailsInteractor: NSObject {
 
 extension RepoDetailsInteractor: RepoDetailsPresenterToInteractorInterface {
 	func getRepoDetails(repo: Repository) {
-		guard let owner = repo.owner?.userName, let repoName = repo.name else { return }
-		Alamofire.request(Router.getRepoDetails(owner: owner, repoName: repoName)).validate().responseJSON { response in
-			switch response.result {
-			case .success:
-				let repository = Repository(json: JSON(response.result.value as Any))
-				self.presenter.repoDetailsFetchedSuccessfully(repo: repository)
-			case .failure(let error):
-				self.presenter.repoDetailsFetchOperationFailed(error: error)
+		
+		RepoService.shared.getRepoDetails(repo: repo) { [weak self] result in
+			DispatchQueue.main.async {
+				switch result {
+				case .success(let repository):
+					self?.presenter.repoDetailsFetchedSuccessfully(repo: repository)
+				case .failure(let error):
+					self?.presenter.repoDetailsFetchOperationFailed(error: error)
+				}
 			}
 		}
 	}

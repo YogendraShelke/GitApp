@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class UserInteractor: NSObject {
 	
@@ -20,14 +18,14 @@ class UserInteractor: NSObject {
 
 extension UserInteractor: UserPresenterToInteractorInterface {
 	func fetchUserDeatils(user: User) {
-		guard let userName = user.userName else { return }
-		Alamofire.request(Router.getUserDetails(user: userName)).validate().responseJSON { response in
-			switch response.result {
-			case .success:
-				let userDetails = User(json: JSON(response.result.value as Any))
-				self.presenter.userDetailsFetchedSuccessfully(user: userDetails)
-			case .failure(let error):
-				self.presenter.userDetailsFetchOperationFailed(error: error)
+		UserService.shared.getUserDetails(user: user) {[weak self] result in
+			DispatchQueue.main.async {
+				switch result {
+				case .success(let userDetails):
+					self?.presenter.userDetailsFetchedSuccessfully(user: userDetails)
+				case .failure(let error):
+					self?.presenter.userDetailsFetchOperationFailed(error: error)
+				}
 			}
 		}
 	}

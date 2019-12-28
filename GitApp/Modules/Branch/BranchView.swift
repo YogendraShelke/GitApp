@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 
 class BranchView : UIViewController {
 	// MARK: - VIPER Stack
@@ -16,7 +15,6 @@ class BranchView : UIViewController {
 	// MARK: - Instance Variables
 	var repo: Repository?
 	var branches: [Branch] = []
-	var spinner: MBProgressHUD!
 	
 	// MARK: - Outlets
 	@IBOutlet weak var tableView: UITableView!
@@ -24,15 +22,8 @@ class BranchView : UIViewController {
 	// MARK: - Operational
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		showActivityIndicator()
+		showActivity()
 		tableView.tableFooterView = UIView()
-	}
-	
-	func showActivityIndicator() {
-		spinner = MBProgressHUD.showAdded(to: view, animated: true)
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
 	}
 }
 
@@ -57,17 +48,11 @@ extension BranchView: UITableViewDataSource {
 extension BranchView: BranchPresenterToViewInterface {
 	func showBranchList(branchList: [Branch]) {
 		branches = branchList
-		spinner.hide(animated: true)
+		hideActivity()
 		tableView.reloadData()
 	}
 	
 	func showError(error: Error) {
-		spinner.mode = .text
-		spinner.detailsLabel.text = error.localizedDescription
-		spinner.removeFromSuperViewOnHide = true
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
-		spinner.hide(animated: true, afterDelay: 3)
+		showToast(message: error.localizedDescription)
 	}
 }

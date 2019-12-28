@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B30CE3F6B8E76273D031051 /* Pods_GitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09333014D14768213CFE2625 /* Pods_GitApp.framework */; };
+		5102B61323B7CC6500DD6E90 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B61223B7CC6500DD6E90 /* UIImageView+Extension.swift */; };
+		5102B61923B80C3B00DD6E90 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B61823B80C3B00DD6E90 /* Service.swift */; };
+		5102B61C23B80CDA00DD6E90 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B61B23B80CDA00DD6E90 /* Activity.swift */; };
+		5102B61E23B80D2700DD6E90 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B61D23B80D2700DD6E90 /* UserService.swift */; };
+		5102B62023B80D4A00DD6E90 /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B61F23B80D4A00DD6E90 /* RepoService.swift */; };
+		5102B62223B80D8300DD6E90 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B62123B80D8300DD6E90 /* URLSession+Extension.swift */; };
+		5102B62423B80DC600DD6E90 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102B62323B80DC600DD6E90 /* UIViewController+Extension.swift */; };
 		511EDA9E1FCAD27500928DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDA9D1FCAD27500928DC2 /* AppDelegate.swift */; };
 		511EDAA51FCAD27500928DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAA41FCAD27500928DC2 /* Assets.xcassets */; };
 		511EDAA81FCAD27500928DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAA61FCAD27500928DC2 /* LaunchScreen.storyboard */; };
@@ -26,13 +34,6 @@
 		511EDAF41FCAD44300928DC2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC41FCAD44300928DC2 /* Repository.swift */; };
 		511EDAF51FCAD44300928DC2 /* RepoListInteractor .swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC51FCAD44300928DC2 /* RepoListInteractor .swift */; };
 		511EDAF61FCAD44300928DC2 /* RepoListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC61FCAD44300928DC2 /* RepoListWireframe.swift */; };
-		511EDAF71FCAD44300928DC2 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC81FCAD44300928DC2 /* Language.swift */; };
-		511EDAF81FCAD44300928DC2 /* LanguageWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAC91FCAD44300928DC2 /* LanguageWireframe.swift */; };
-		511EDAF91FCAD44300928DC2 /* LanguageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACA1FCAD44300928DC2 /* LanguageInteractor.swift */; };
-		511EDAFA1FCAD44300928DC2 /* LanguagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACB1FCAD44300928DC2 /* LanguagePresenter.swift */; };
-		511EDAFB1FCAD44300928DC2 /* LanguageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACC1FCAD44300928DC2 /* LanguageProtocols.swift */; };
-		511EDAFC1FCAD44300928DC2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDACD1FCAD44300928DC2 /* LanguageView.swift */; };
-		511EDAFD1FCAD44300928DC2 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDACE1FCAD44300928DC2 /* Language.storyboard */; };
 		511EDAFE1FCAD44300928DC2 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAD01FCAD44300928DC2 /* User.storyboard */; };
 		511EDAFF1FCAD44300928DC2 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD11FCAD44300928DC2 /* UserView.swift */; };
 		511EDB001FCAD44300928DC2 /* UserWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAD21FCAD44300928DC2 /* UserWireframe.swift */; };
@@ -55,12 +56,17 @@
 		511EDB111FCAD44300928DC2 /* ContributorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDAE51FCAD44300928DC2 /* ContributorWireframe.swift */; };
 		511EDB121FCAD44300928DC2 /* Contributor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EDAE61FCAD44300928DC2 /* Contributor.storyboard */; };
 		511EDB151FCAD44E00928DC2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EDB141FCAD44E00928DC2 /* Router.swift */; };
-		91BC50D1D00D673875B21F20 /* Pods_GitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB0FA9EFCD68FD2D7524F5 /* Pods_GitApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07CB0FA9EFCD68FD2D7524F5 /* Pods_GitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11FF9C8340B98DB91A47EC80 /* Pods-GitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitApp/Pods-GitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		09333014D14768213CFE2625 /* Pods_GitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5102B61223B7CC6500DD6E90 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		5102B61823B80C3B00DD6E90 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5102B61B23B80CDA00DD6E90 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		5102B61D23B80D2700DD6E90 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		5102B61F23B80D4A00DD6E90 /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
+		5102B62123B80D8300DD6E90 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		5102B62323B80DC600DD6E90 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		511EDA9A1FCAD27500928DC2 /* GitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511EDA9D1FCAD27500928DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511EDAA41FCAD27500928DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,13 +88,6 @@
 		511EDAC41FCAD44300928DC2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		511EDAC51FCAD44300928DC2 /* RepoListInteractor .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RepoListInteractor .swift"; sourceTree = "<group>"; };
 		511EDAC61FCAD44300928DC2 /* RepoListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListWireframe.swift; sourceTree = "<group>"; };
-		511EDAC81FCAD44300928DC2 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		511EDAC91FCAD44300928DC2 /* LanguageWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageWireframe.swift; sourceTree = "<group>"; };
-		511EDACA1FCAD44300928DC2 /* LanguageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageInteractor.swift; sourceTree = "<group>"; };
-		511EDACB1FCAD44300928DC2 /* LanguagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePresenter.swift; sourceTree = "<group>"; };
-		511EDACC1FCAD44300928DC2 /* LanguageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageProtocols.swift; sourceTree = "<group>"; };
-		511EDACD1FCAD44300928DC2 /* LanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
-		511EDACE1FCAD44300928DC2 /* Language.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
 		511EDAD01FCAD44300928DC2 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		511EDAD11FCAD44300928DC2 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		511EDAD21FCAD44300928DC2 /* UserWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWireframe.swift; sourceTree = "<group>"; };
@@ -111,7 +110,8 @@
 		511EDAE51FCAD44300928DC2 /* ContributorWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorWireframe.swift; sourceTree = "<group>"; };
 		511EDAE61FCAD44300928DC2 /* Contributor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contributor.storyboard; sourceTree = "<group>"; };
 		511EDB141FCAD44E00928DC2 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		9F81B16B71375F86066E3364 /* Pods-GitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitApp/Pods-GitApp.release.xcconfig"; sourceTree = "<group>"; };
+		6F7A5EFA4DC7B8DAC2F21EA1 /* Pods-GitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitApp.release.xcconfig"; path = "Target Support Files/Pods-GitApp/Pods-GitApp.release.xcconfig"; sourceTree = "<group>"; };
+		AB5CDB5289CAFE41EE6A382E /* Pods-GitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitApp.debug.xcconfig"; path = "Target Support Files/Pods-GitApp/Pods-GitApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,19 +119,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91BC50D1D00D673875B21F20 /* Pods_GitApp.framework in Frameworks */,
+				4B30CE3F6B8E76273D031051 /* Pods_GitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		330A22DCA55286F1B867C4A4 /* Frameworks */ = {
+		375C9FF255BB884191DFE3E4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07CB0FA9EFCD68FD2D7524F5 /* Pods_GitApp.framework */,
+				AB5CDB5289CAFE41EE6A382E /* Pods-GitApp.debug.xcconfig */,
+				6F7A5EFA4DC7B8DAC2F21EA1 /* Pods-GitApp.release.xcconfig */,
 			);
-			name = Frameworks;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5102B61123B7CC4E00DD6E90 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5102B61223B7CC6500DD6E90 /* UIImageView+Extension.swift */,
+				5102B62123B80D8300DD6E90 /* URLSession+Extension.swift */,
+				5102B62323B80DC600DD6E90 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5102B61A23B80C9300DD6E90 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				511EDABD1FCAD44300928DC2 /* CardView.swift */,
+				5102B61B23B80CDA00DD6E90 /* Activity.swift */,
+			);
+			path = CommonView;
 			sourceTree = "<group>";
 		};
 		511EDA911FCAD27500928DC2 = {
@@ -139,8 +159,8 @@
 			children = (
 				511EDA9C1FCAD27500928DC2 /* GitApp */,
 				511EDA9B1FCAD27500928DC2 /* Products */,
-				E9472B95342D9F682A66A143 /* Pods */,
-				330A22DCA55286F1B867C4A4 /* Frameworks */,
+				375C9FF255BB884191DFE3E4 /* Pods */,
+				9914E2336AC529A6721EB5B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +175,7 @@
 		511EDA9C1FCAD27500928DC2 /* GitApp */ = {
 			isa = PBXGroup;
 			children = (
+				5102B61123B7CC4E00DD6E90 /* Extension */,
 				511EDB131FCAD44E00928DC2 /* Router */,
 				511EDAB31FCAD44300928DC2 /* Modules */,
 				511EDA9D1FCAD27500928DC2 /* AppDelegate.swift */,
@@ -168,9 +189,9 @@
 		511EDAB31FCAD44300928DC2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5102B61A23B80C9300DD6E90 /* CommonView */,
 				511EDAB41FCAD44300928DC2 /* Branch */,
 				511EDABC1FCAD44300928DC2 /* RepoList */,
-				511EDAC71FCAD44300928DC2 /* Language */,
 				511EDACF1FCAD44300928DC2 /* User */,
 				511EDAD81FCAD44300928DC2 /* RepoDeatils */,
 				511EDAE01FCAD44300928DC2 /* Contributor */,
@@ -195,7 +216,6 @@
 		511EDABC1FCAD44300928DC2 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				511EDABD1FCAD44300928DC2 /* CardView.swift */,
 				511EDABE1FCAD44300928DC2 /* RepoCell.swift */,
 				511EDABF1FCAD44300928DC2 /* RepoListProtocols.swift */,
 				511EDAC01FCAD44300928DC2 /* RepoListPresenter.swift */,
@@ -206,20 +226,6 @@
 				511EDAC61FCAD44300928DC2 /* RepoListWireframe.swift */,
 			);
 			path = RepoList;
-			sourceTree = "<group>";
-		};
-		511EDAC71FCAD44300928DC2 /* Language */ = {
-			isa = PBXGroup;
-			children = (
-				511EDAC81FCAD44300928DC2 /* Language.swift */,
-				511EDAC91FCAD44300928DC2 /* LanguageWireframe.swift */,
-				511EDACA1FCAD44300928DC2 /* LanguageInteractor.swift */,
-				511EDACB1FCAD44300928DC2 /* LanguagePresenter.swift */,
-				511EDACC1FCAD44300928DC2 /* LanguageProtocols.swift */,
-				511EDACD1FCAD44300928DC2 /* LanguageView.swift */,
-				511EDACE1FCAD44300928DC2 /* Language.storyboard */,
-			);
-			path = Language;
 			sourceTree = "<group>";
 		};
 		511EDACF1FCAD44300928DC2 /* User */ = {
@@ -268,17 +274,19 @@
 			isa = PBXGroup;
 			children = (
 				511EDB141FCAD44E00928DC2 /* Router.swift */,
+				5102B61823B80C3B00DD6E90 /* Service.swift */,
+				5102B61F23B80D4A00DD6E90 /* RepoService.swift */,
+				5102B61D23B80D2700DD6E90 /* UserService.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		E9472B95342D9F682A66A143 /* Pods */ = {
+		9914E2336AC529A6721EB5B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11FF9C8340B98DB91A47EC80 /* Pods-GitApp.debug.xcconfig */,
-				9F81B16B71375F86066E3364 /* Pods-GitApp.release.xcconfig */,
+				09333014D14768213CFE2625 /* Pods_GitApp.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,12 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 511EDAAC1FCAD27500928DC2 /* Build configuration list for PBXNativeTarget "GitApp" */;
 			buildPhases = (
-				70FAD515818F18BD2DADACBE /* [CP] Check Pods Manifest.lock */,
+				795A72D1D6FFDC2BE4F33247 /* [CP] Check Pods Manifest.lock */,
 				511EDA961FCAD27500928DC2 /* Sources */,
 				511EDA971FCAD27500928DC2 /* Frameworks */,
 				511EDA981FCAD27500928DC2 /* Resources */,
-				C827A9BD4A41DA6340CED5C0 /* [CP] Embed Pods Frameworks */,
-				813637D82FCE40F114373291 /* [CP] Copy Pods Resources */,
+				CA1A6788602DAEEAC887D26A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,11 +318,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Yogendra Shelke";
 				TargetAttributes = {
 					511EDA991FCAD27500928DC2 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -346,7 +354,6 @@
 				511EDB121FCAD44300928DC2 /* Contributor.storyboard in Resources */,
 				511EDAF21FCAD44300928DC2 /* RepoList.storyboard in Resources */,
 				511EDB071FCAD44300928DC2 /* RepoDetails.storyboard in Resources */,
-				511EDAFD1FCAD44300928DC2 /* Language.storyboard in Resources */,
 				511EDAEC1FCAD44300928DC2 /* Branch.storyboard in Resources */,
 				511EDAA81FCAD27500928DC2 /* LaunchScreen.storyboard in Resources */,
 				511EDAA51FCAD27500928DC2 /* Assets.xcassets in Resources */,
@@ -357,16 +364,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		70FAD515818F18BD2DADACBE /* [CP] Check Pods Manifest.lock */ = {
+		795A72D1D6FFDC2BE4F33247 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GitApp-checkManifestLockResult.txt",
 			);
@@ -375,43 +386,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		813637D82FCE40F114373291 /* [CP] Copy Pods Resources */ = {
+		CA1A6788602DAEEAC887D26A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitApp/Pods-GitApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C827A9BD4A41DA6340CED5C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GitApp/Pods-GitApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GitApp/Pods-GitApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitApp/Pods-GitApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitApp/Pods-GitApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -425,13 +415,14 @@
 				511EDAEA1FCAD44300928DC2 /* BranchPresenter.swift in Sources */,
 				511EDAF11FCAD44300928DC2 /* RepoListPresenter.swift in Sources */,
 				511EDB091FCAD44300928DC2 /* RepoDetailsInteractor.swift in Sources */,
-				511EDAFB1FCAD44300928DC2 /* LanguageProtocols.swift in Sources */,
 				511EDB051FCAD44300928DC2 /* UserStatsCell.swift in Sources */,
+				5102B61923B80C3B00DD6E90 /* Service.swift in Sources */,
 				511EDAF41FCAD44300928DC2 /* Repository.swift in Sources */,
 				511EDB0A1FCAD44300928DC2 /* RepoDetailsView.swift in Sources */,
 				511EDAE71FCAD44300928DC2 /* BranchView.swift in Sources */,
 				511EDB0B1FCAD44300928DC2 /* RepoDetailsPresenter.swift in Sources */,
 				511EDAF61FCAD44300928DC2 /* RepoListWireframe.swift in Sources */,
+				5102B61C23B80CDA00DD6E90 /* Activity.swift in Sources */,
 				511EDAE91FCAD44300928DC2 /* Branch.swift in Sources */,
 				511EDA9E1FCAD27500928DC2 /* AppDelegate.swift in Sources */,
 				511EDAEF1FCAD44300928DC2 /* RepoCell.swift in Sources */,
@@ -441,24 +432,24 @@
 				511EDB0D1FCAD44300928DC2 /* ContributorPresenter.swift in Sources */,
 				511EDB041FCAD44300928DC2 /* UserPresenter.swift in Sources */,
 				511EDAFF1FCAD44300928DC2 /* UserView.swift in Sources */,
+				5102B62023B80D4A00DD6E90 /* RepoService.swift in Sources */,
 				511EDB001FCAD44300928DC2 /* UserWireframe.swift in Sources */,
-				511EDAFA1FCAD44300928DC2 /* LanguagePresenter.swift in Sources */,
 				511EDAF51FCAD44300928DC2 /* RepoListInteractor .swift in Sources */,
 				511EDAF01FCAD44300928DC2 /* RepoListProtocols.swift in Sources */,
+				5102B61323B7CC6500DD6E90 /* UIImageView+Extension.swift in Sources */,
 				511EDB111FCAD44300928DC2 /* ContributorWireframe.swift in Sources */,
+				5102B62423B80DC600DD6E90 /* UIViewController+Extension.swift in Sources */,
 				511EDB0E1FCAD44300928DC2 /* ContributorInteractor.swift in Sources */,
-				511EDAF91FCAD44300928DC2 /* LanguageInteractor.swift in Sources */,
 				511EDAEE1FCAD44300928DC2 /* CardView.swift in Sources */,
 				511EDB031FCAD44300928DC2 /* UserInteractor.swift in Sources */,
 				511EDB0F1FCAD44300928DC2 /* ContributorProtocols.swift in Sources */,
-				511EDAF71FCAD44300928DC2 /* Language.swift in Sources */,
 				511EDAF31FCAD44300928DC2 /* RepoListView.swift in Sources */,
 				511EDB151FCAD44E00928DC2 /* Router.swift in Sources */,
+				5102B61E23B80D2700DD6E90 /* UserService.swift in Sources */,
 				511EDB011FCAD44300928DC2 /* User.swift in Sources */,
 				511EDB101FCAD44300928DC2 /* ContributorView.swift in Sources */,
+				5102B62223B80D8300DD6E90 /* URLSession+Extension.swift in Sources */,
 				511EDAEB1FCAD44300928DC2 /* BranchProtocols.swift in Sources */,
-				511EDAFC1FCAD44300928DC2 /* LanguageView.swift in Sources */,
-				511EDAF81FCAD44300928DC2 /* LanguageWireframe.swift in Sources */,
 				511EDB0C1FCAD44300928DC2 /* RepoDetailsProtocols.swift in Sources */,
 				511EDB061FCAD44300928DC2 /* Options.swift in Sources */,
 			);
@@ -500,6 +491,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -507,6 +499,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -557,6 +550,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -564,6 +558,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -595,30 +590,35 @@
 		};
 		511EDAAD1FCAD27500928DC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11FF9C8340B98DB91A47EC80 /* Pods-GitApp.debug.xcconfig */;
+			baseConfigurationReference = AB5CDB5289CAFE41EE6A382E /* Pods-GitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yogendrs.GitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		511EDAAE1FCAD27500928DC2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F81B16B71375F86066E3364 /* Pods-GitApp.release.xcconfig */;
+			baseConfigurationReference = 6F7A5EFA4DC7B8DAC2F21EA1 /* Pods-GitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yogendrs.GitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

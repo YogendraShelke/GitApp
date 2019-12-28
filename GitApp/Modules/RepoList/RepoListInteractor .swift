@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class RepoListInteractor {
 	// MARK: - VIPER Stack
@@ -20,19 +18,14 @@ class RepoListInteractor {
 extension RepoListInteractor: RepoListPresenterToInteractorInterface {
 	
 	func getPublicRepos() {
-		Alamofire.request(Router.getPublicRepos).validate().responseJSON { response in
-			switch response.result {
-			case .success:
-				var repoList: [Repository] = []
-				if let objectList = response.result.value as? [Any] {
-					for json in objectList {
-						repoList.append(Repository(json: JSON(json)))
-					}
+		RepoService.shared.getPublicRepos {[weak self] result in
+			DispatchQueue.main.async {
+				switch result {
+				case .success(let repoList):
+					self?.presenter.reposFetchedSuccessfully(repoList: repoList)
+				case .failure(let error):
+					self?.presenter.repoFetchOperationFailed(error: error)
 				}
-				repoList.sort{ $0.name! < $1.name! }
-				self.presenter.reposFetchedSuccessfully(repoList: repoList)
-			case .failure(let error):
-				self.presenter.repoFetchOperationFailed(error: error)
 			}
 		}
 	}

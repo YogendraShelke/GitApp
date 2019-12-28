@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Alamofire
 
-enum Router: URLRequestConvertible {
+enum Router: CustomStringConvertible {
 	
 	case getPublicRepos
 	case getRepoDetails(owner: String, repoName: String)
@@ -18,33 +17,16 @@ enum Router: URLRequestConvertible {
 	case getBranches(owner: String, repoName: String)
 	case getUserDetails(user: String)
 	
-	static let baseURLString = "https://api.github.com"
+	static let baseURL = "https://api.github.com"
 	
-	var method: HTTPMethod {
+	var description: String {
 		switch self {
-		case .getPublicRepos, .getRepoDetails, .getContributors, .getBranches, . getLanguages, .getUserDetails: return .get
+		case .getPublicRepos: return "\(Router.baseURL)/repositories"
+		case .getRepoDetails(let owner, let repoName): return "\(Router.baseURL)/repos/\(owner)/\(repoName)"
+		case .getContributors(let owner, let repoName): return "\(Router.baseURL)/repos/\(owner)/\(repoName)/contributors"
+		case .getBranches(let owner, let repoName): return "\(Router.baseURL)/repos/\(owner)/\(repoName)/branches"
+		case .getLanguages(let owner, let repoName): return "\(Router.baseURL)/repos/\(owner)/\(repoName)/languages"
+		case .getUserDetails(let user): return "\(Router.baseURL)/users/\(user)"
 		}
-	}
-	
-	var path: String {
-		switch self {
-		case .getPublicRepos: return "/repositories"
-		case .getRepoDetails(let owner, let repoName): return "/repos/\(owner)/\(repoName)"
-		case .getContributors(let owner, let repoName): return "/repos/\(owner)/\(repoName)/contributors"
-		case .getBranches(let owner, let repoName): return "/repos/\(owner)/\(repoName)/branches"
-		case .getLanguages(let owner, let repoName): return "/repos/\(owner)/\(repoName)/languages"
-		case .getUserDetails(let user): return "/users/\(user)"
-		}
-	}
-	
-	// MARK: URLRequestConvertible
-	
-	func asURLRequest() throws -> URLRequest {
-		let url = try Router.baseURLString.asURL()
-		
-		var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-		urlRequest.httpMethod = method.rawValue
-		
-		return urlRequest
 	}
 }

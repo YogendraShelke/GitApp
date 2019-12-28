@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 
 class ContributorView : UIViewController {
 	// MARK: - VIPER Stack
@@ -16,7 +15,6 @@ class ContributorView : UIViewController {
 	// MARK: - Instance Variables
 	var repo: Repository?
 	var contributors: [User] = []
-	var spinner: MBProgressHUD!
 	
 	// MARK: - Outlets
 	@IBOutlet weak var tableView: UITableView!
@@ -24,15 +22,9 @@ class ContributorView : UIViewController {
 	// MARK: - Operational
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		showActivityIndicator()
+		showActivity()
 		tableView.tableFooterView = UIView()
-	}
-	
-	func showActivityIndicator() {
-		spinner = MBProgressHUD.showAdded(to: view, animated: true)
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
+		tableView.separatorColor = .init(white: 0.6, alpha: 1)
 	}
 }
 
@@ -42,11 +34,7 @@ extension ContributorView: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContributorCell", for: indexPath) as! RepoCell
 		let contributor = contributors[indexPath.row]
-		cell.title?.text = contributor.userName
-		if let imageUrl = contributor.profilePicUrl {
-			cell.avatar.sd_setImage(with: URL(string: imageUrl), completed: nil)
-		}
-
+		cell.configure(title: contributor.username, desc: nil, imageUrl: contributor.avatar)
 		return cell
 	}
 	
@@ -68,17 +56,11 @@ extension ContributorView: ContributorPresenterToViewInterface {
 	
 	func showContributorList(contributors: [User]) {
 		self.contributors = contributors
-		spinner.hide(animated: true)
+		hideActivity()
 		tableView.reloadData()
 	}
 	
 	func showError(error: Error) {
-		spinner.mode = .text
-		spinner.detailsLabel.text = error.localizedDescription
-		spinner.removeFromSuperViewOnHide = true
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
-		spinner.hide(animated: true, afterDelay: 3)
+		showToast(message: error.localizedDescription)
 	}
 }

@@ -10,7 +10,6 @@ import UIKit
 
 enum Options: String {
 	case contributors = "Contributors"
-	case languages = "Languages"
 	case branches = "Branches"
 }
 

@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 class BranchInteractor: NSObject {
 	// MARK: - VIPER Stack
@@ -19,20 +17,15 @@ class BranchInteractor: NSObject {
 
 extension BranchInteractor: BranchPresenterToInteractorInterface {
 	func getBranches(repo: Repository) {
-		guard let owner = repo.owner?.userName, let repoName = repo.name else { return }
-		Alamofire.request(Router.getBranches(owner: owner, repoName: repoName)).validate().responseJSON { response in
-			switch response.result {
-			case .success:
-				var branchList: [Branch] = []
-				if let objectList = response.result.value as? [Any] {
-					for json in objectList {
-						branchList.append(Branch(json: JSON(json)))
-					}
+		
+		RepoService.shared.getBranches(repo: repo) { [weak self] result in
+			DispatchQueue.main.async {
+				switch result {
+				case .success(let branchList):
+					self?.presenter.branchesFetchedSuccessfully(branchList: branchList)
+				case .failure(let error):
+					self?.presenter.branchesFetchOperationFailed(error: error)
 				}
-				self.presenter.branchesFetchedSuccessfully(branchList: branchList)
-
-			case .failure(let error):
-				self.presenter.branchesFetchOperationFailed(error: error)
 			}
 		}
 	}

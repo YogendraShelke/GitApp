@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
-import MBProgressHUD
 
 class UserView : UIViewController {
 	
@@ -17,7 +15,6 @@ class UserView : UIViewController {
         
 	// MARK: - Instance Variables
 	var userStats: [(key: String, value: String)] = []
-	var spinner: MBProgressHUD!
 
 	// MARK: - Outlets
 	@IBOutlet weak var profileImage: UIImageView!
@@ -33,22 +30,15 @@ class UserView : UIViewController {
 		profileImage.layer.borderWidth = 4
 		profileImage.layer.borderColor = UIColor.white.cgColor
 		profileImage.clipsToBounds = true
-		showActivityIndicator()
-	}
-	
-	func showActivityIndicator() {
-		spinner = MBProgressHUD.showAdded(to: view, animated: true)
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
+		showActivity()
 	}
 	
 	func updateView(user: User) {
 		name.text = user.name
 		company.text = user.company
 		location.text = user.location
-		if let imageUrl = user.profilePicUrl {
-			profileImage.sd_setImage(with: URL(string: imageUrl), completed: nil)
+		if let imageUrl = user.avatar, let url = URL(string: imageUrl) {
+			profileImage.load(url: url)
 		}
 		if let publicRepos = user.publicRepos {
 			userStats.append((key: "Public Repositories", value: "\(publicRepos)"))
@@ -94,17 +84,11 @@ extension UserView: UICollectionViewDelegateFlowLayout {
 
 extension UserView: UserPresenterToViewInterface {
 	func showDetails(user: User) {
-		spinner.hide(animated: true)
+		hideActivity()
 		updateView(user: user)
 	}
 	
 	func showError(error: Error) {
-		spinner.mode = .text
-		spinner.detailsLabel.text = error.localizedDescription
-		spinner.removeFromSuperViewOnHide = true
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
-		spinner.hide(animated: true, afterDelay: 3)
+		showToast(message: error.localizedDescription)
 	}
 }

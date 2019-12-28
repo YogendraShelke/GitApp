@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import MBProgressHUD
 
 class RepoDetailsView : UIViewController {
 	
@@ -18,7 +16,6 @@ class RepoDetailsView : UIViewController {
 	// MARK: - Instance Variables
 	var options: [Options] = []
 	var repo: Repository?
-	var spinner: MBProgressHUD!
 
 	// MARK: - Outlets
 	@IBOutlet weak var tableView: UITableView!
@@ -35,7 +32,7 @@ class RepoDetailsView : UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.tableFooterView = UIView()
-		showActivityIndicator()
+		showActivity()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -43,22 +40,15 @@ class RepoDetailsView : UIViewController {
 		updateView()
 	}
 	
-	func showActivityIndicator() {
-		spinner = MBProgressHUD.showAdded(to: view, animated: true)
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
-	}
-	
 	func updateView() {
 		title = repo?.name
 		titleLabel.text = repo?.name
-		descriptionLabel.text = repo?.desc
-		watchLabel.text = String(describing:repo?.watch ?? 0)
+		descriptionLabel.text = repo?.description
+		watchLabel.text = String(describing:repo?.subscribers ?? 0)
 		bugLabel.text = String(describing:repo?.openIssues ?? 0)
 		forkLabel.text = String(describing:repo?.forks ?? 0)
 		languageLabel.text = repo?.language
-		adminLabel.text = repo?.owner?.userName
+		adminLabel.text = repo?.owner?.username
 		starsLabel.text = String(describing:repo?.stars ?? 0)
 		tableView.reloadData()
 	}
@@ -94,25 +84,19 @@ extension RepoDetailsView: UITableViewDelegate {
 extension RepoDetailsView: RepoDetailsPresenterToViewInterface {
 	func showOptions(repo: Repository) {
 		self.repo = repo
-		options = [.contributors, .languages, .branches]
+		options = [.contributors, .branches]
 		if isViewLoaded {
 			updateView()
 		}
 	}
 	
 	func showError(error: Error) {
-		spinner.mode = .text
-		spinner.detailsLabel.text = error.localizedDescription
-		spinner.removeFromSuperViewOnHide = true
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
-		spinner.hide(animated: true, afterDelay: 3)
+		showToast(message: error.localizedDescription)
 	}
 	
 	func showRepoDetails(repo: Repository) {
 		self.repo = repo
-		spinner.hide(animated: true)
+		hideActivity()
 		updateView()
 	}
 }

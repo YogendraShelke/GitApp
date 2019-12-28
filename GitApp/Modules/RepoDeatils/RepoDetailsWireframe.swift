@@ -65,10 +65,6 @@ extension RepoDetailsWireframe: RepoDetailsPresesnterToWireframeInterface {
 			let contributorModule = ContributorWireframe()
 			moduleView.navigationController?.pushViewController(contributorModule.moduleView, animated: true)
 			contributorModule.showContributors(repo: repo)
-		case .languages:
-			let languageModule = LanguageWireframe()
-			moduleView.navigationController?.pushViewController(languageModule.moduleView, animated: true)
-			languageModule.showLanguages(repo: repo)
 		}
 		let backItem = UIBarButtonItem()
 		backItem.title = "Back"

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
-import MBProgressHUD
 
 class RepoListView : UIViewController {
 	
@@ -17,7 +15,6 @@ class RepoListView : UIViewController {
 	
 	// MARK: - Instance Variables
 	var repoList: [Repository] = []
-	var spinner: MBProgressHUD!
 
 	// MARK: - Outlets
 	@IBOutlet weak var tableView: UITableView!
@@ -28,14 +25,7 @@ class RepoListView : UIViewController {
 		tableView.tableFooterView = UIView()
 		title = "Home"
 		presenter.getPublicRepos()
-		showActivityIndicator()
-	}
-	
-	func showActivityIndicator() {
-		spinner = MBProgressHUD.showAdded(to: view, animated: true)
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
+		showActivity()
 	}
 }
 
@@ -43,14 +33,9 @@ class RepoListView : UIViewController {
 extension RepoListView: UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
 		let cell = tableView.dequeueReusableCell(withIdentifier: "RepoListCell", for: indexPath) as! RepoCell
 		let repo = repoList[indexPath.row]
-		cell.title?.text = repo.name
-		cell.desc.text = repo.desc
-		if let imageUrl = repo.owner?.profilePicUrl {
-			cell.avatar.sd_setImage(with: URL(string: imageUrl), completed: nil)
-		}
+		cell.configure(title: repo.name, desc: repo.description, imageUrl: repo.owner?.avatar)
 		return cell
 	}
 
@@ -73,17 +58,11 @@ extension RepoListView: RepoListPresenterToViewInterface {
 	func showRepoList(repoList: [Repository]) {
 		self.repoList = repoList
 		tableView.reloadData()
-		spinner.hide(animated: true)
+		hideActivity()
 	}
 	
 	func showError(error: Error) {
-		spinner.mode = .text
-		spinner.detailsLabel.text = error.localizedDescription
-		spinner.removeFromSuperViewOnHide = true
-		spinner.margin = 20
-		spinner.bezelView.color = .black
-		spinner.contentColor = .white
-		spinner.hide(animated: true, afterDelay: 3)
+		showToast(message: error.localizedDescription)
 	}
 }
 

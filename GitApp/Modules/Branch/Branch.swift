@@ -7,17 +7,13 @@
 //
 
 import UIKit
-import SwiftyJSON
 
-class Branch: NSObject {
-	var name: String?
-	var sha: String?
-	var commitUrl: String?
-	
-	init(json: JSON) {
-		
-		if let name = json["name"].string { self.name = name }
-		if let sha = json["commit"]["sha"].string { self.sha = sha }
-		if let commitUrl = json["commit"]["url"].string { self.commitUrl = commitUrl }
-	}
+struct Commit: Decodable {
+	let sha: String?
+	let url: String
+}
+
+struct Branch: Decodable {
+	let name: String?
+	let commit: Commit?
 }
