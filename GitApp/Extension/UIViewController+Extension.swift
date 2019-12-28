@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yogendra Shelke. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIViewController {
 	func showActivity() {
